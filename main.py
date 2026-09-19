@@ -1,5 +1,13 @@
 from core.data_pipeline import ETFDataPipeline
+from core.clawer import FinancialNewsCrawler
+import asyncio
 import datetime
+
+NEWS_SOURCES = {
+    "Yahoo_Finance": "https://finance.yahoo.com/news/rssindex",
+    "CNBC_Top_News": "https://search.cnbc.com/rs/search/combinedcms/view.xml?profile=120000000",
+    "WSJ_Markets": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml"
+}
 
 def main():
     target_assets=["SPY","QQQ","TLT","GLD"]
@@ -15,4 +23,18 @@ def main():
 
     print(price)
 
-main()
+
+    crawler = FinancialNewsCrawler(
+        sources=NEWS_SOURCES, 
+        interval_seconds=300, 
+        output_file="data/news.txt"
+    )
+    
+    try:
+        asyncio.run(crawler.start_polling())
+    except KeyboardInterrupt:
+        # 中斷指令:終端機按下Ctrl+C
+        print("\n新聞監控已手動停止。")
+
+if __name__ == "__main__":
+    main()

@@ -31,6 +31,23 @@ class FinancialNewsCrawler:
         
         return text
 
+    def fetch_full_article_sync(self, url: str) -> str:
+        try:
+            req = urllib.request.Request(url, headers=self.headers)
+            with urllib.request.urlopen(req, timeout=10.0) as response:
+                html_data = response.read().decode('utf-8', errors='ignore')
+            
+            paragraphs = re.findall(r'<p[^>]*>(.*?)</p>', html_data, re.IGNORECASE | re.DOTALL)
+            
+            if not paragraphs:
+                return ""
+                
+            full_text = " ".join(paragraphs)
+            return self.clean_text(full_text)
+            
+        except Exception as e:
+            return ""
+
     def fetch_feed_sync(self, source_name: str, url: str) -> list[dict]:
         cleaned_articles = [] 
         req = urllib.request.Request(url, headers=self.headers)
@@ -53,18 +70,20 @@ class FinancialNewsCrawler:
                 pub_elem = item.find('pubDate')
                 pub_date = pub_elem.text.strip() if (pub_elem is not None and pub_elem.text) else "Unknown"
 
-                desc_elem = item.find('description')
-                raw_desc = desc_elem.text if desc_elem is not None else ""
-
                 clean_title = self.clean_text(raw_title)
-                clean_desc = self.clean_text(raw_desc)
 
+                full_content = self.fetch_full_article_sync(link)
+                if not full_content:
+                    desc_elem = item.find('description')
+                    raw_desc = desc_elem.text if desc_elem is not None else ""
+                    full_content = self.clean_text(raw_desc)
+                    
                 if clean_title:
                     cleaned_articles.append({
                         "source": source_name,
                         "published_at": pub_date,
                         "title": clean_title,
-                        "content": clean_desc
+                        "content": full_content
                     })
                 
                 self.seen_urls.add(link)

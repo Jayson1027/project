@@ -1,6 +1,5 @@
 import asyncio
 import urllib.request
-from urllib.error import URLError
 import xml.etree.ElementTree as ET
 from datetime import datetime
 import re   
@@ -15,8 +14,6 @@ class FinancialNewsCrawler:
         self.seen_urls: set[str] = set() 
         self.headers = {
             "User-Agent": (
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
                 "Chrome/124.0.0.0 Safari/537.36"
             )
         }

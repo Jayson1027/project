@@ -104,7 +104,7 @@ class FinancialNewsCrawler:
                 )
                 f.write(text_line)
             
-        print(f"✅ 已將 {len(new_articles)} 筆包含日期、標題與內文的文本寫入 {self.output_file}")
+        print(f"已將 {len(new_articles)} 筆文本寫入 {self.output_file}")
 
     async def run_once(self):
         print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 開始抓取與清洗焦點新聞...")

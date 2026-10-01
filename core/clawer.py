@@ -107,7 +107,7 @@ class FinancialNewsCrawler:
         print(f"已將 {len(new_articles)} 筆文本寫入 {self.output_file}")
 
     async def run_once(self):
-        print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 開始抓取與清洗焦點新聞...")
+        print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 開始抓取與清洗焦點新聞")
         tasks = [
             asyncio.to_thread(self.fetch_feed_sync, source, url)
             for source, url in self.sources.items()
@@ -122,10 +122,10 @@ class FinancialNewsCrawler:
             return            
         self.save_to_txt(new_articles)
         for i, article in enumerate(new_articles[:3], 1):
-            print(f"{i}. [{article['source']}] {article['title'][:50]}...")
+            print(f"{i}. [{article['source']}] {article['title'][:50]}")
 
     async def start_polling(self):
-        print(f"非同步爬蟲啟動，每 {self.interval_seconds} 秒抓取並輸出非結構化文字...")
+        print(f"非同步爬蟲啟動，每 {self.interval_seconds} 秒抓取並輸出非結構化文字")
         while True:
             await self.run_once()
             await asyncio.sleep(self.interval_seconds)

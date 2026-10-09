@@ -7,7 +7,8 @@ import re
 
 class FinancialNewsCrawler:
 
-    def __init__(self, sources: dict[str, str], interval_seconds: int = 300, output_file: str = "news_data.json"):
+    def __init__(self, sources: dict[str, str], interval_seconds: int = 300,
+                 output_file: str = "news_data.txt"):
         self.sources = sources
         self.interval_seconds = interval_seconds
         self.output_file = output_file   
@@ -95,16 +96,17 @@ class FinancialNewsCrawler:
 
         with open(self.output_file, 'a', encoding='utf-8') as f:
             for article in new_articles:
-                text_line = (
-                    f"抓取時間: {timestamp} | "
-                    f"發布時間: {article['published_at']} | "
-                    f"來源: [{article['source']}] | "
-                    f"標題: {article['title']} | "
-                    f"內文: {article['content']}\n"
-                )
-                f.write(text_line)
+                # 💡 改成用「多行文字」的格式寫入，每篇新聞中間用虛線隔開
+                f.write(f"==================================================\n")
+                f.write(f"【抓取時間】: {timestamp}\n")
+                f.write(f"【發布時間】: {article['published_at']}\n")
+                f.write(f"【媒體來源】: [{article['source']}]\n")
+                f.write(f"【新聞標題】: {article['title']}\n")
+                f.write(f"【新聞內文】:\n{article['content']}\n")
+                f.write(f"==================================================\n\n")
             
-        print(f"已將 {len(new_articles)} 筆文本寫入 {self.output_file}")
+        print(f"已將 {len(new_articles)} 筆文本以易讀排版寫入 {self.output_file}")
+
 
     async def run_once(self):
         print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 開始抓取與清洗焦點新聞")

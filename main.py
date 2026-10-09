@@ -4,9 +4,13 @@ import asyncio
 import datetime
 
 NEWS_SOURCES = {
-    "Yahoo_Finance": "https://finance.yahoo.com/news/rssindex",
-    "CNBC_Top_News": "https://search.cnbc.com/rs/search/combinedcms/view.xml?profile=120000000",
-    "WSJ_Markets": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml"
+    # 1. 聯準會官方新聞（專注利率、貨幣政策，對 TLT / SPY 極度重要，零雜訊）
+    "Federal_Reserve": "https://www.federalreserve.gov/feeds/press_monetary.xml",
+    
+    # 2. CNBC 市場頻道（過濾掉政治與生活新聞，只留美股、美債、黃金、油價）
+    "CNBC_Markets": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
+    
+    "WSJ_Tech": "https://feeds.content.dowjones.io/public/rss/RSSWSJD"
 }
 
 def main():

@@ -40,5 +40,8 @@ def main():
         # 中斷指令:終端機按下Ctrl+C
         print("\n新聞監控已手動停止。")
 
+
+
+
 if __name__ == "__main__":
     main()

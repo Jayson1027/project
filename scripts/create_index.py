@@ -11,11 +11,11 @@ client = QdrantClient(
 
 print("正在為 Qdrant 的 date 欄位建立索引")
 
-# 為 project 集合中的 date 欄位建立 keyword 索引
+# 為 project 集合中的 date 欄位建立 datetime 索引
 client.create_payload_index(
     collection_name="project",
     field_name="date",
-    field_schema="keyword"
+    field_schema="datetime"
 )
 
 print("索引建立完成！")

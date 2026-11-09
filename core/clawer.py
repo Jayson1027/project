@@ -1,8 +1,10 @@
+import html
 import asyncio
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime
-import re   
+import re
+from email.utils import parsedate_to_datetime
 
 
 class FinancialNewsCrawler:
@@ -24,10 +26,16 @@ class FinancialNewsCrawler:
             return ""
 
         text = re.sub(r'<[^>]+>', '', raw_text)
-        text = text.replace('&nbsp;', ' ').replace('&amp;', '&').replace('&quot;', '"')
+        text = html.unescape(text).replace('\xa0', ' ')
         text = re.sub(r'\s+', ' ', text).strip()
         
         return text
+
+    def parse_pub_date(self, raw_date: str) -> datetime | None:
+        try:
+            return parsedate_to_datetime(raw_date)
+        except (TypeError, ValueError):
+            return None
 
     def fetch_full_article_sync(self, url: str) -> str:
         try:
@@ -80,6 +88,7 @@ class FinancialNewsCrawler:
                     cleaned_articles.append({
                         "source": source_name,
                         "published_at": pub_date,
+                        "published_dt": self.parse_pub_date(pub_date),
                         "title": clean_title,
                         "content": full_content
                     })
@@ -125,6 +134,19 @@ class FinancialNewsCrawler:
         self.save_to_txt(new_articles)
         for i, article in enumerate(new_articles[:3], 1):
             print(f"{i}. [{article['source']}] {article['title'][:50]}")
+
+    async def fetch_latest(self) -> list[dict]:
+        tasks = [
+            asyncio.to_thread(self.fetch_feed_sync, source, url)
+            for source, url in self.sources.items()
+        ]
+        results = await asyncio.gather(*tasks)
+        articles = [article for sublist in results for article in sublist]
+        articles.sort(
+            key=lambda a: a["published_dt"].timestamp() if a["published_dt"] else 0,
+            reverse=True,
+        )
+        return articles
 
     async def start_polling(self):
         print(f"非同步爬蟲啟動，每 {self.interval_seconds} 秒抓取並輸出非結構化文字")

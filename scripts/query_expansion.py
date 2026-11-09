@@ -1,5 +1,6 @@
 import os
 import json
+from datetime import date
 from google import genai
 from google.genai import types
 from pydantic import BaseModel, Field
@@ -24,7 +25,10 @@ class QueryExpansionPlan(BaseModel):
 
 class QueryExpansionEngine:
     def __init__(self, api_key: str):
-        self.client = genai.Client(api_key=api_key)
+        self.client = genai.Client(api_key=api_key, http_options=types.HttpOptions(
+            api_version="v1beta",
+            retry_options=types.HttpRetryOptions(attempts=5, initial_delay=2.0, max_delay=30.0, http_status_codes=[503]),
+        ))
         self.model_name = 'gemini-2.5-flash'
         
     def generate_plan(self, runtime_news: str, fed_state: str, market_focus: str) -> list[dict]:
@@ -66,7 +70,7 @@ class QueryExpansionEngine:
         1. 我們的歷史文獻庫僅包含 2004-01-01 至 2024-12-31 的資料。
         2. start_date 與 end_date 必須嚴格落在此區間內。
         3. start_date 與 end_date 間隔須為剛好一年
-        3. 請為每個時間段提供簡短的 historical_context 理由。
+        4. 請為每個時間段提供簡短的 historical_context 理由。
         """
 
         response_p2 = self.client.models.generate_content(
@@ -80,6 +84,11 @@ class QueryExpansionEngine:
         )
         
         plan_data = json.loads(response_p2.text)
+        for q in plan_data["sub_queries"]:
+            start = date.fromisoformat(q["start_date"])
+            end = date.fromisoformat(q["end_date"])
+            if start > end or end > date.today():
+                raise ValueError(f"LLM 回傳的日期範圍不合法: {q}")
         return plan_data["sub_queries"]
 
 if __name__ == "__main__":

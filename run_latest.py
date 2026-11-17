@@ -10,13 +10,13 @@ from qdrant_client import QdrantClient
 from core.agent1 import MacroAgent
 from core.clawer import FinancialNewsCrawler
 from core.fed_retriever import FedRetriever
-from main import NEWS_SOURCES, TARGET_ASSETS
+from main import NEWS_SOURCES
 from scripts.query_expansion import QueryExpansionEngine
 from scripts.state_tracker import StateTracker
 
 COLLECTION_NAME = "project"
 OUTPUT_PATH = Path("data/latest_rag.json")
-CONSTRAINTS_PATH = Path("data/latest_constraints.json")
+MACRO_PATH = Path("data/latest_macro.json")
 
 
 def format_news(articles: list[dict]) -> str:
@@ -55,12 +55,12 @@ def main():
     context = retriever.build_context(results)
     print(context)
 
-    decision = MacroAgent(gemini_key, TARGET_ASSETS).analyze(
+    macro = MacroAgent(gemini_key).analyze(
         runtime_news=news_text,
         fed_state=state,
         rag_results=results,
     )
-    print(json.dumps(decision, ensure_ascii=False, indent=2))
+    print(json.dumps(macro, ensure_ascii=False, indent=2))
 
     generated_at = datetime.now().isoformat(timespec="seconds")
     OUTPUT_PATH.write_text(
@@ -74,7 +74,7 @@ def main():
                 "fed_state": state,
                 "retrieval": results,
                 "context": context,
-                "agent1": decision,
+                "agent1": macro,
             },
             ensure_ascii=False,
             indent=2,
@@ -83,20 +83,11 @@ def main():
     )
     print(f"結果已存到 {OUTPUT_PATH}")
 
-    CONSTRAINTS_PATH.write_text(
-        json.dumps(
-            {
-                "generated_at": generated_at,
-                "market_stance": decision["market_stance"],
-                "confidence": decision["confidence"],
-                "constraints": decision["constraints"],
-            },
-            ensure_ascii=False,
-            indent=2,
-        ),
+    MACRO_PATH.write_text(
+        json.dumps({"generated_at": generated_at, **macro}, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-    print(f"約束條件已存到 {CONSTRAINTS_PATH}")
+    print(f"大環境判斷已存到 {MACRO_PATH}（供 Agent 2 使用）")
 
 
 if __name__ == "__main__":

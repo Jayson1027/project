@@ -3,10 +3,12 @@ from qdrant_client.models import Filter, FieldCondition, DatetimeRange
 
 
 class FedRetriever:
-    def __init__(self, qdrant_client, collection_name: str, top_k: int = 3):
+    def __init__(self, qdrant_client, collection_name: str, top_k: int = 3, min_score: float = 0.55):
         self.qdrant_client = qdrant_client
         self.collection_name = collection_name
         self.top_k = top_k
+        # 相似度低於此值的段落視為明顯無關：不送給 Agent 1，但保留在 filtered_out 方便事後檢查
+        self.min_score = min_score
         self.embedder = TextEmbedding(model_name="BAAI/bge-small-en-v1.5")
 
     def retrieve(self, sub_queries: list[dict]) -> list[dict]:
@@ -26,16 +28,16 @@ class FedRetriever:
                 hit for hit in response.points
                 if len(hit.payload.get("content", "")) >= 100
             ][:self.top_k]
-            documents = [
-                {
+            documents, filtered_out = [], []
+            for hit in hits:
+                doc = {
                     "date": hit.payload.get("date"),
                     "type": hit.payload.get("type"),
                     "content": self._with_neighbors(hit),
                     "score": hit.score,
                 }
-                for hit in hits
-            ]
-            results.append({**q, "documents": documents})
+                (documents if hit.score >= self.min_score else filtered_out).append(doc)
+            results.append({**q, "documents": documents, "filtered_out": filtered_out})
         return results
 
     def _with_neighbors(self, hit) -> str:

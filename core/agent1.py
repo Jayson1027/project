@@ -53,7 +53,7 @@ class Agent1Output(BaseModel):
     macro_signals: MacroSignals
     sentiment_analysis: SentimentAnalysis
     tactical_guidance: TacticalGuidance
-    historical_analogs: list[HistoricalAnalog] = Field(description="支持判斷的歷史文獻引用")
+    historical_analogs: list[HistoricalAnalog] = Field(description="真正可作為當前情境類比的歷史文獻引用；都不相符時為空陣列")
     reasoning: str = Field(description="從新聞、Fed 狀態與歷史文獻推論出上述判斷的過程 (繁體中文)")
 
 
@@ -94,8 +94,6 @@ class MacroAgent:
         for a in output.historical_analogs:
             if a.doc_id not in docs:
                 errors.append(f"historical_analogs 引用了不存在的文獻編號 {a.doc_id}")
-        if docs and not output.historical_analogs:
-            errors.append("historical_analogs 至少要引用一份提供的歷史文獻")
         return errors
 
     def analyze(self, runtime_news: str, fed_state: dict, rag_results: list[dict], market_data: dict) -> dict:
@@ -112,6 +110,8 @@ class MacroAgent:
         2. suggested_safe_haven_bias 與 max_growth_asset_exposure 為 0~1 的比例。
         3. interest_rate_trend 要對照【市場數據】中十年期殖利率的實際變化判斷。
         4. historical_analogs 只能引用下方出現的文獻編號 (如 D1)，不可引用其他文獻或自行編造。
+           只引用經濟情境真正與現在相似、可作為類比的文獻；主題相近但情境不同的不要引用。
+           若所有文獻都不相符，historical_analogs 留空陣列，並在 reasoning 說明原因。
         5. reasoning 要寫清楚每個判斷依據哪些新聞、哪項市場數據與哪份文獻。
         6. 新聞附有發布時間，請以較新的新聞為主。
         7. 文字欄位請使用繁體中文。

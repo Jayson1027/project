@@ -1,7 +1,7 @@
 import asyncio
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -10,6 +10,7 @@ from qdrant_client import QdrantClient
 from core.agent1 import MacroAgent
 from core.clawer import FinancialNewsCrawler
 from core.fed_retriever import FedRetriever
+from core.market_data import fetch_market_snapshot
 from main import NEWS_SOURCES
 from scripts.query_expansion import QueryExpansionEngine
 from scripts.state_tracker import StateTracker
@@ -17,6 +18,22 @@ from scripts.state_tracker import StateTracker
 COLLECTION_NAME = "project"
 OUTPUT_PATH = Path("data/latest_rag.json")
 MACRO_PATH = Path("data/latest_macro.json")
+NEWS_WINDOW = timedelta(days=7)
+
+
+def recent_news(articles: list[dict], window: timedelta = NEWS_WINDOW) -> list[dict]:
+    """只保留發布時間在 window 內的新聞；沒有時區的時間視為 UTC，無法解析時間的捨棄。"""
+    cutoff = datetime.now(timezone.utc) - window
+    recent = []
+    for a in articles:
+        dt = a.get("published_dt")
+        if dt is None:
+            continue
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        if dt >= cutoff:
+            recent.append(a)
+    return recent
 
 
 def format_news(articles: list[dict]) -> str:
@@ -36,11 +53,15 @@ def main():
     )
 
     crawler = FinancialNewsCrawler(sources=NEWS_SOURCES)
-    articles = asyncio.run(crawler.fetch_latest())
+    fetched = asyncio.run(crawler.fetch_latest())
+    articles = recent_news(fetched)
     if not articles:
-        raise RuntimeError("沒有抓到任何新聞")
-    print(f"抓到 {len(articles)} 篇新聞")
+        raise RuntimeError(f"抓到 {len(fetched)} 篇新聞，但沒有一篇在最近 {NEWS_WINDOW.days} 天內")
+    print(f"抓到 {len(fetched)} 篇新聞，最近 {NEWS_WINDOW.days} 天內 {len(articles)} 篇")
     news_text = format_news(articles)
+
+    market = fetch_market_snapshot()
+    print(f"市場數據：{market}")
 
     state = StateTracker(qdrant, COLLECTION_NAME, gemini_key).get_state()
 
@@ -59,6 +80,7 @@ def main():
         runtime_news=news_text,
         fed_state=state,
         rag_results=results,
+        market_data=market,
     )
     print(json.dumps(macro, ensure_ascii=False, indent=2))
 
@@ -72,6 +94,7 @@ def main():
                     for a in articles
                 ],
                 "fed_state": state,
+                "market_data": market,
                 "retrieval": results,
                 "context": context,
                 "agent1": macro,

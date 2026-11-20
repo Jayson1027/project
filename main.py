@@ -13,8 +13,10 @@ NEWS_SOURCES = {
     "WSJ_Tech": "https://feeds.content.dowjones.io/public/rss/RSSWSJD"
 }
 
+TARGET_ASSETS = ["SPY", "QQQ", "TLT", "GLD"]
+
 def main():
-    target_assets=["SPY","QQQ","TLT","GLD"]
+    target_assets=TARGET_ASSETS
     today=datetime.date.today()
     one_week_ago=today-datetime.timedelta(days=7)
 

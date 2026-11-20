@@ -1,0 +1,23 @@
+[
+  {
+    "id": "q1",
+    "search_query": "Inflationary pressures from technology infrastructure investment and central bank tightening cycles",
+    "start_date": "2022-01-01",
+    "end_date": "2022-12-31",
+    "source": "Step 2 實際輸出（2026-11-16）"
+  },
+  {
+    "id": "q2",
+    "search_query": "Geopolitical tech rivalry, semiconductor export restrictions, and corporate governance issues",
+    "start_date": "2020-01-01",
+    "end_date": "2020-12-31",
+    "source": "Step 2 實際輸出（2026-11-16）"
+  },
+  {
+    "id": "q3",
+    "search_query": "China economic slowdown, property market distress, and global trade implications",
+    "start_date": "2021-09-01",
+    "end_date": "2022-08-31",
+    "source": "Step 2 實際輸出（2026-11-16）"
+  }
+]

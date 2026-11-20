@@ -218,14 +218,17 @@
       },
       {
         "doc": "2022-12-14|Statement",
-        "grade": null,
+        "grade": 1,
         "closest_passages": [
           "Russia's war against Ukraine is causing tremendous human and economic hardship. The war and related events are contributing to upward pressure on inflation and are weighing on global economic activity. The Committee is highly attentive to inflation risks.",
           "Recent indicators point to modest growth in spending and production. Job gains have been robust in recent months, and the unemployment rate has remained low. Inflation remains elevated, reflecting supply and demand imbalances related to the pandemic, higher food and energy prices, and broader price pressures.",
           "appropriate in order to attain a stance of monetary policy that is sufficiently restrictive to return inflation to 2 percent over time. In determining the pace of future increases in the target range, the Committee will take into account the cumulative tightening of monetary policy, the lags with which monetary policy affects economic activity and inflation, and economic and financial",
           "policy affects economic activity and inflation, and economic and financial developments. In addition, the Committee will continue reducing its holdings of Treasury securities and agency debt and agency mortgage-backed securities, as described in the Plans for Reducing the Size of the Federal Reserve's Balance Sheet that were issued in May. The Committee is strongly committed to returning",
           "The Committee seeks to achieve maximum employment and inflation at the rate of 2 percent over the longer run. In support of these goals, the Committee decided to raise the target range for the federal funds rate to 4-1/4 to 4-1/2 percent. The Committee anticipates that ongoing increases in the target range will be appropriate in order to attain a stance of monetary policy that is sufficiently"
-        ]
+        ],
+        "gemini_grade": 1,
+        "grade_source": "gemini",
+        "reason": "文件討論了通膨壓力及央行緊縮貨幣政策，但未提及科技基礎設施投資造成的通膨壓力。"
       }
     ]
   },
@@ -238,210 +241,267 @@
     "documents": [
       {
         "doc": "2020-01-29|Minute",
-        "grade": null,
+        "grade": 1,
         "closest_passages": [
           "likelihood of a recession occurring over the next year had fallen notably in recent months. Still, participants generally expected trade-related uncertainty to remain somewhat elevated, and they were mindful of the possibility that the tentative signs of stabilization in global growth could fade. Geopolitical risks, especially in connection with the Middle East, remained. The threat of the",
           "With respect to the business sector, participants observed that business investment and exports remained weak and that manufacturing output had declined over the past year. Looking ahead, participants were generally cautiously optimistic about the effects on the business sector of the recent favorable trade developments and the signs of stabilization in global growth. Many participants expressed",
           "low interest rates and labor market tightness could increase risks to financial stability, or that cyber attacks could affect the U.S. financial system. Several participants noted that planned increases in dividend payouts by large banks and the associated decline in capital buffers might leave those banks with less capacity to weather adverse shocksâwhich could have negative implications for",
           "For most of the intermeeting period, foreign equity prices rose amid progress on U.S.âChina trade negotiations, generally favorable data on global economic activity, and the reduced risk of a disorderly Brexit following the U.K. general election. Late in the period, however, concerns about the coronavirus outbreak in China weighed on risk sentiment. On balance, most major foreign equity indexes",
           "evidence suggests that the effects of changes in policy rates on asset prices and risk premiums tend to be modest relative to the historical fluctuations in those measures. However, there may be circumstances in which a persistently accommodative policy stance that is otherwise consistent with the dual-mandate goals may contribute to an increase in financial system vulnerabilities, including"
-        ]
+        ],
+        "gemini_grade": 1,
+        "grade_source": "gemini",
+        "reason": "文件提及地緣政治風險和美中貿易談判，與查詢中的地緣政治和貿易相關，但未直接討論科技競爭、半導體出口限制或企業治理問題。"
       },
       {
         "doc": "2020-01-29|Statement",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "Information received since the Federal Open Market Committee met in December indicates that the labor market remains strong and that economic activity has been rising at a moderate rate. Job gains have been solid, on average, in recent months, and the unemployment rate has remained low. Although household spending has been rising at a moderate pace, business fixed investment and exports remain",
           "been rising at a moderate pace, business fixed investment and exports remain weak. On a 12âmonth basis, overall inflation and inflation for items other than food and energy are running below 2 percent. Market-based measures of inflation compensation remain low; survey-based measures of longer-term inflation expectations are little changed.",
           "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michelle W. Bowman; Lael Brainard; Richard H. Clarida; Patrick Harker; Robert S. Kaplan; Neel Kashkari; Loretta J. Mester; and Randal K. Quarles.\n\nImplementation Note issued January 29, 2020",
           "Consistent with its statutory mandate, the Committee seeks to foster maximum employment and price stability. The Committee decided to maintain the target range for the federal funds rate at 1â1/2 to 1-3/4 percent. The Committee judges that the current stance of monetary policy is appropriate to support sustained expansion of economic activity, strong labor market conditions, and inflation",
           "In determining the timing and size of future adjustments to the target range for the federal funds rate, the Committee will assess realized and expected economic conditions relative to its maximum employment objective and its symmetric 2 percent inflation objective. This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of"
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件內容主要討論勞動市場、經濟活動、通膨和貨幣政策，與地緣政治科技競爭、半導體出口限制或公司治理議題無關。"
       },
       {
         "doc": "2020-03-03|Minute",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "With regard to financial developments over the intermeeting period, participants noted that financial markets had exhibited extraordinary turbulence and stresses. Participants commented on the conditions of high volatility and illiquidity characterizing the markets for U.S. Treasury securities, especially off-the-run longer-term securities, and for agency MBS. Participants expressed concern about",
           "however, in some areas of the country, the construction industry had reported continuing disruptions to supply chains from China. Participants indicated that disruptions in the European economy and recent restrictions on travel from Europe to the United States would adversely affect the U.S. economy's supply chains; so too, if it eventuated, would a large increase in U.S. worker unavailability",
           "intensified significantly. In addition, the energy sector had come under stress because of recent large declines in oil prices. Many U.S. businesses had moved to telework arrangements; other businesses, however, could not readily shift to telework status or had limited telework technology. Participants observed that the coronavirus outbreak had inevitably hurt business confidence and that the",
           "Participants raised several alternative scenarios with regard to the likely behavior of economic activity in the second half of this year. These scenarios differed from one another in the assumed length and severity of disruptions to economic activity. Several participants emphasized that the temporary nature of the shock to economic activity, the fact that the shock arose in the nonfinancial",
           "the coronavirus outbreak had inevitably hurt business confidence and that the expected length and severity of the restrictions on economic activity that involved in-person interaction would importantly affect the size of the response of investment spending to the situation. Participants expressed concern about the financial strain that many U.S. firms were under because of the loss of business"
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件內容主要討論金融市場波動、供應鏈中斷（非科技或地緣政治競爭）、疫情對經濟活動的影響及油價下跌，與查詢中的地緣政治科技競爭、半導體出口限制及公司治理議題無關。"
       },
       {
         "doc": "2020-03-03|Statement",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "The fundamentals of the U.S. economy remain strong. However, the coronavirus poses evolving risks to economic activity. In light of these risks and in support of achieving its maximum employment and price stability goals, the Federal Open Market Committee decided today to lower the target range for the federal funds rate by 1/2 percentage point, to 1 to 1â1/4 percent. The Committee is closely",
           "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michelle W. Bowman; Lael Brainard; Richard H. Clarida; Patrick Harker; Robert S. Kaplan; Neel Kashkari; Loretta J. Mester; and Randal K. Quarles.\n\nFor media inquiries, call 202-452-2955.\n\nImplementation Note issued March 3, 2020",
           "rate by 1/2 percentage point, to 1 to 1â1/4 percent. The Committee is closely monitoring developments and their implications for the economic outlook and will use its tools and act as appropriate to support the economy."
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件內容主要關於聯準會因應疫情的貨幣政策，與地緣政治科技競爭、半導體出口限制及公司治理議題無關。"
       },
       {
         "doc": "2020-03-15|Minute",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "With regard to financial developments over the intermeeting period, participants noted that financial markets had exhibited extraordinary turbulence and stresses. Participants commented on the conditions of high volatility and illiquidity characterizing the markets for U.S. Treasury securities, especially off-the-run longer-term securities, and for agency MBS. Participants expressed concern about",
           "however, in some areas of the country, the construction industry had reported continuing disruptions to supply chains from China. Participants indicated that disruptions in the European economy and recent restrictions on travel from Europe to the United States would adversely affect the U.S. economy's supply chains; so too, if it eventuated, would a large increase in U.S. worker unavailability",
           "intensified significantly. In addition, the energy sector had come under stress because of recent large declines in oil prices. Many U.S. businesses had moved to telework arrangements; other businesses, however, could not readily shift to telework status or had limited telework technology. Participants observed that the coronavirus outbreak had inevitably hurt business confidence and that the",
           "Participants raised several alternative scenarios with regard to the likely behavior of economic activity in the second half of this year. These scenarios differed from one another in the assumed length and severity of disruptions to economic activity. Several participants emphasized that the temporary nature of the shock to economic activity, the fact that the shock arose in the nonfinancial",
           "the coronavirus outbreak had inevitably hurt business confidence and that the expected length and severity of the restrictions on economic activity that involved in-person interaction would importantly affect the size of the response of investment spending to the situation. Participants expressed concern about the financial strain that many U.S. firms were under because of the loss of business"
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件內容主要討論疫情對金融市場、供應鏈和經濟活動的影響，未提及地緣政治科技競爭、半導體出口限制或公司治理議題。"
       },
       {
         "doc": "2020-03-15|Statement",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "since the Federal Open Market Committee met in January indicates that the labor market remained strong through February and economic activity rose at a moderate rate. Job gains have been solid, on average, in recent months, and the unemployment rate has remained low. Although household spending rose at a moderate pace, business fixed investment and exports remained weak. More recently, the energy",
           "business fixed investment and exports remained weak. More recently, the energy sector has come under stress. On a 12âmonth basis, overall inflation and inflation for items other than food and energy are running below 2 percent. Market-based measures of inflation compensation have declined; survey-based measures of longer-term inflation expectations are little changed.",
           "The coronavirus outbreak has harmed communities and disrupted economic activity in many countries, including the United States. Global financial conditions have also been significantly affected. Available economic data show that the U.S. economy came into this challenging period on a strong footing. Information received since the Federal Open Market Committee met in January indicates that the",
           "Consistent with its statutory mandate, the Committee seeks to foster maximum employment and price stability. The effects of the coronavirus will weigh on economic activity in the near term and pose risks to the economic outlook. In light of these developments, the Committee decided to lower the target range for the federal funds rate to 0 to 1/4 percent. The Committee expects to maintain this",
           "conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments."
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件內容主要討論勞動市場、經濟活動、通膨以及新冠疫情對經濟的影響，並未提及地緣政治科技競爭、半導體出口限制或公司治理議題。"
       },
       {
         "doc": "2020-03-23|Statement",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "The Federal Open Market Committee is taking further actions to support the flow of credit to households and businesses by addressing strains in the markets for Treasury securities and agency mortgage-backed securities. The Federal Reserve will continue to purchase Treasury securities and agency mortgage-backed securities in the amounts needed to support smooth market functioning and effective",
           "For media inquiries, call 202-452-2955.\n                \n                \n                    \n                        \n                            \n                            Federal Reserve announces extensive new measures to support the economy",
           "\"Effective March 23, 2020, the Federal Open Market Committee directs the Desk to undertake open market operations as necessary to maintain the federal funds rate in a target range of 0 to 1/4 percent. The Committee directs the Desk to increase the System Open Market Account holdings of Treasury securities and agency mortgage-backed securities (MBS) in the amounts needed to support the smooth",
           "The Federal Reserve is committed to use its full range of tools to support the U.S. economy in this challenging time and thereby promote its maximum employment and price stability goals.",
           "The Committee also directs the Desk to continue conducting term and overnight repurchase agreement operations to ensure that the supply of reserves remains ample and to support the smooth functioning of short-term U.S. dollar funding markets. In addition, the Committee directs the Desk to conduct overnight reverse repurchase operations (and reverse repurchase operations with maturities of more"
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件內容主要討論聯準會的貨幣政策和支持經濟的措施，與地緣政治科技競爭、半導體出口限制或公司治理議題無關。"
       },
       {
         "doc": "2020-04-29|Minute",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "Participants observed that conditions in the energy sector had become especially difficult. A sharp reduction in global demand for petroleum had led to unused supply that was overwhelming storage capacity, resulting in a plunge in oil prices. Some participants expressed concern that low energy prices, if they were to persist, had the potential to create a wave of bankruptcies in the energy",
           "The longer-term behavior of firms could be affected as wellâfor instance, if necessary but costly transmission-mitigation strategies lowered firms' productivity; if business investment shifted down permanently; if many firms need to adjust their business models in the aftermath of the pandemic; or if business closures, particularly those of small firms, became widespread. A few participants",
           "participants noted the risk that foreign economies, particularly EMEs, could come under extreme pressure as a result of the pandemic and that this strain could spill over to and hamper U.S. economic activity. Participants stressed that measures taken in the areas of health-care policy and fiscal policy, together with actions by the private sector, would be important in shaping the timing and",
           "in jeopardy the orderly functioning of some financial markets. Federal Reserve actions to enhance the liquidity and functioning of key markets reduced these stresses notably. Open-end mutual funds that invest in corporate bonds and loansâinstitutions that typically face a timing mismatch between investors' ability to redeem shares and the funds' ability to sell assetsâexperienced heavy",
           "Early in the period, cascading shutdowns in many countries weighed heavily on risk sentiment abroad. Many foreign financial markets experienced severe illiquidity and substantial volatility, and foreign equity indexes posted large declines. However, extraordinary monetary and fiscal policy actions in the United States and abroad helped improve market sentiment, and most major foreign equity"
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件段落主要討論疫情對能源、企業行為和金融市場的影響，未提及地緣政治科技競爭、半導體出口限制或公司治理議題。"
       },
       {
         "doc": "2020-04-29|Statement",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "financial conditions. In addition, the Open Market Desk will continue to offer large-scale overnight and term repurchase agreement operations. The Committee will closely monitor market conditions and is prepared to adjust its plans as appropriate.",
           "The ongoing public health crisis will weigh heavily on economic activity, employment, and inflation in the near term, and poses considerable risks to the economic outlook over the medium term. In light of these developments, the Committee decided to maintain the target range for the federal funds rate at 0 to 1/4 percent. The Committee expects to maintain this target range until it is confident",
           "The coronavirus outbreak is causing tremendous human and economic hardship across the United States and around the world. The virus and the measures taken to protect public health are inducing sharp declines in economic activity and a surge in job losses. Weaker demand and significantly lower oil prices are holding down consumer price inflation. The disruptions to economic activity here and",
           "conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments.",
           "To support the flow of credit to households and businesses, the Federal Reserve will continue to purchase Treasury securities and agency residential and commercial mortgage-backed securities in the amounts needed to support smooth market functioning, thereby fostering effective transmission of monetary policy to broader financial conditions. In addition, the Open Market Desk will continue to"
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件段落主要討論疫情對經濟的影響及貨幣政策，未提及地緣政治科技競爭、半導體出口限制或公司治理議題。"
       },
       {
         "doc": "2020-06-10|Minute",
-        "grade": null,
+        "grade": 1,
         "closest_passages": [
           "Risk sentiment in foreign financial markets improved over the intermeeting period. Further monetary policy and fiscal policy support in foreign countries, the easing of coronavirus-related restrictions, and a stronger-than-expected U.S. May employment report outweighed concerns about otherwise weak global economic data and the resurgence of U.S.âChina tensions. Liquidity in global dollar",
           "prospects for adverse developments regarding the coronavirus (COVID-19) and the potential for financial strains to amplify recessionary dynamics, and geopolitical developments, including renewed U.S.âChina tensions, presented near term risks to financial markets. Market participants were also attentive to the recent steepening in the Treasury yield curve and noted a range of uncertainties in",
           "Participants noted that conditions in the energy sector remained difficult amid still-low oil prices. Several participants anticipated continued low drilling activity, at least until excess inventories were reduced later this year, and expressed concern that a wave of bankruptcies in the energy sector could be forthcoming. In addition, the agricultural sector continued to be under stress due to",
           "Participants discussed tools for conducting monetary policy when the federal funds rate is at its effective lower bound (ELB). The discussion addressed two topics: (1) the roles of forward guidance and large-scale asset purchase programs in supporting the attainment of the Committee's maximum-employment and price-stability goals and (2) in light of the foreign and historical experience with",
           "dire economic data releases, warnings from health experts that openings may have been premature, and renewed tensions between the United States and China. Equity prices rose, and corporate bond spreads narrowed notably. The Treasury yield curve steepened, and the market-implied expected path of the federal funds rate declined somewhat. Liquidity conditions continued to improve in general, but"
-        ]
+        ],
+        "gemini_grade": 1,
+        "grade_source": "gemini",
+        "reason": "文件提及美中緊張關係和地緣政治發展，與查詢中的地緣政治競爭相關，但未具體討論科技競爭、半導體出口限制或公司治理議題。"
       },
       {
         "doc": "2020-06-10|Statement",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "The ongoing public health crisis will weigh heavily on economic activity, employment, and inflation in the near term, and poses considerable risks to the economic outlook over the medium term. In light of these developments, the Committee decided to maintain the target range for the federal funds rate at 0 to 1/4 percent. The Committee expects to maintain this target range until it is confident",
           "To support the flow of credit to households and businesses, over coming months the Federal Reserve will increase its holdings of Treasury securities and agency residential and commercial mortgage-backed securities at least at the current pace to sustain smooth market functioning, thereby fostering effective transmission of monetary policy to broader financial conditions. In addition, the Open",
           "The coronavirus outbreak is causing tremendous human and economic hardship across the United States and around the world. The virus and the measures taken to protect public health have induced sharp declines in economic activity and a surge in job losses. Weaker demand and significantly lower oil prices are holding down consumer price inflation. Financial conditions have improved, in part",
           "conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments.",
           "of monetary policy to broader financial conditions. In addition, the Open Market Desk will continue to offer large-scale overnight and term repurchase agreement operations. The Committee will closely monitor developments and is prepared to adjust its plans as appropriate."
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件中沒有任何段落直接討論地緣政治科技競爭、半導體出口限制或公司治理議題，僅提及泛泛的「國際發展」不足以構成相關性。"
       },
       {
         "doc": "2020-07-29|Minute",
-        "grade": null,
+        "grade": 1,
         "closest_passages": [
           "Risk sentiment abroad fluctuated over the intermeeting period as market participants weighed increasing coronavirus cases in a number of countries against improving economic data releases and ongoing fiscal and monetary policy support. Foreign equity prices generally declined on net. A resurgence of geopolitical tensions between the United States and China weighed on investor sentiment late in",
           "declined sharply, and share prices of banksâwhich faced earnings pressures from large loan loss provisions and compressed net interest marginsâcontinued to underperform. As the SOMA manager highlighted, the S&P 500 index has been supported by its significant share of technology firms, many of which have been relatively resilient to virus containment measures. In contrast, smaller firms not",
           "While the S&P 500 index was little changed, the effect of renewed outbreaks was evident in the differentiated performance across S&P industry sectors. Virus-sensitive sectors and firms with weaker fundamentals underperformed over the period, as they had over the broader pandemic episode. Airline and hotel share prices declined sharply, and share prices of banksâwhich faced earnings pressures",
           "resilient to virus containment measures. In contrast, smaller firms not well represented in the S&P 500 may be experiencing greater effects on their businesses due to the virusâa possibility consistent with the underperformance of the broader Russell 2000 index over the intermeeting period.",
           "support for households, businesses, and state and local governments might not provide sufficient relief of financial strains in these sectors and that some foreign economies could come under greater pressure than anticipated as a result of the spread of the pandemic abroad. Several participants noted potential longer-run effects of the pandemic associated with possible restructuring in some"
-        ]
+        ],
+        "gemini_grade": 1,
+        "grade_source": "gemini",
+        "reason": "文件提到「美國和中國之間的地緣政治緊張局勢」，但未直接討論「地緣政治科技競爭」、「半導體出口限制」或「公司治理問題」，僅觸及部分主題的相關背景。"
       },
       {
         "doc": "2020-07-29|Statement",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "The path of the economy will depend significantly on the course of the virus. The ongoing public health crisis will weigh heavily on economic activity, employment, and inflation in the near term, and poses considerable risks to the economic outlook over the medium term. In light of these developments, the Committee decided to maintain the target range for the federal funds rate at 0 to 1/4",
           "To support the flow of credit to households and businesses, over coming months the Federal Reserve will increase its holdings of Treasury securities and agency residential and commercial mortgage-backed securities at least at the current pace to sustain smooth market functioning, thereby fostering effective transmission of monetary policy to broader financial conditions. In addition, the Open",
           "conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments.",
           "The coronavirus outbreak is causing tremendous human and economic hardship across the United States and around the world. Following sharp declines, economic activity and employment have picked up somewhat in recent months but remain well below their levels at the beginning of the year. Weaker demand and significantly lower oil prices are holding down consumer price inflation. Overall financial",
           "lower oil prices are holding down consumer price inflation. Overall financial conditions have improved in recent months, in part reflecting policy measures to support the economy and the flow of credit to U.S. households and businesses."
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件段落主要討論疫情對經濟的影響及聯準會的貨幣政策，未提及地緣政治科技競爭、半導體出口限制或公司治理議題。"
       },
       {
         "doc": "2020-09-16|Minute",
-        "grade": null,
+        "grade": 1,
         "closest_passages": [
           "While the economic outlook had brightened, market participants continued to see significant risks ahead. Some noted concerns about elevated asset valuations in certain sectors. Many also cited geopolitical events as heightening uncertainty. In addition, most forecasters were assuming that an additional pandemic-related fiscal package would be approved this year, and noted that, absent a new",
           "employment growth or could accelerate technological disruption that was likely limiting the pricing power of firms.",
           "Foreign asset price movements were generally muted, with market participants likely weighing concerns over rising infection rates in some countries against the prospect of a COVID-19 vaccine. In emerging market economies (EMEs), Asian equity markets significantly outperformed Latin American counterparts, with Chinese equities showing particular strength. In most AFEs, equity indexes rose modestly",
           "natural rate of interest. And more importantly, Thomas was an expert in Kalman filtering. So we were off to the races on that project. Ironically, given subsequent events, the question of the time was whether the productivity boom had driven r* higher. In fact, if you go back to our December 2000 memo, our first memo to the Board on r*, our original estimates had r* at 4-1/4 percent, and that's",
           "quarter, though gains in consumption continued to lag those in production and exports. Similarly, in Mexico, a strong rebound in manufacturing production contrasted with weak services activity. Despite the widespread rebound in foreign activity indicators, a resurgence in COVID-19 cases in parts of Europe and Asia added uncertainty to the outlook for those economies. Recent readings of headline"
-        ]
+        ],
+        "gemini_grade": 1,
+        "grade_source": "gemini",
+        "reason": "文件提及「地緣政治事件」和「技術顛覆」，但未直接討論地緣政治科技競爭、半導體出口限制或公司治理議題。"
       },
       {
         "doc": "2020-09-16|Statement",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "The path of the economy will depend significantly on the course of the virus. The ongoing public health crisis will continue to weigh on economic activity, employment, and inflation in the near term, and poses considerable risks to the economic outlook over the medium term.",
           "The COVID-19 pandemic is causing tremendous human and economic hardship across the United States and around the world. Economic activity and employment have picked up in recent months but remain well below their levels at the beginning of the year. Weaker demand and significantly lower oil prices are holding down consumer price inflation. Overall financial conditions have improved in recent",
           "The Federal Reserve is committed to using its full range of tools to support the U.S. economy in this challenging time, thereby promoting its maximum employment and price stability goals.",
           "range until labor market conditions have reached levels consistent with the Committee's assessments of maximum employment and inflation has risen to 2 percent and is on track to moderately exceed 2 percent for some time. In addition, over coming months the Federal Reserve will increase its holdings of Treasury securities and agency mortgage-backed securities at least at the current pace to",
           "In assessing the appropriate stance of monetary policy, the Committee will continue to monitor the implications of incoming information for the economic outlook. The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals. The Committee's assessments will take into account a wide range of"
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件內容主要討論COVID-19對經濟的影響以及聯準會的貨幣政策，與地緣政治科技競爭、半導體出口限制和公司治理議題無關。"
       },
       {
         "doc": "2020-11-05|Minute",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "employment growth or an acceleration of technological disruptions that could be limiting the pricing power of some firms.",
           "Investor sentiment abroad turned negative over the intermeeting period amid rising COVID-19 case counts, newly adopted restrictions aimed at containing the spread of the virus, and indicators pointing to a slowing recovery in several foreign economies, particularly in the euro area. Uncertainty about additional U.S. fiscal stimulus and the outcome of the U.S. presidential election also caused",
           "with ties to small businesses and the hospitality, aviation, and nonresidential construction industriesâwere still seeing very difficult circumstances. Contacts reported improved conditions in the agricultural sector, boosted by strong demand from China as well as domestic ethanol production, higher crop prices, and federal aid payments. Looking ahead, some business contacts expressed concerns",
           "cases in Europe and the reimposition of restrictions there could lead to a slowdown in economic activity in the euro area and have negative spillover effects on the U.S. recovery. Some participants raised concerns regarding the longer-run effects of the pandemic, including sectoral restructurings that could slow employment growth or an acceleration of technological disruptions that could be",
           "associated with tighter credit availability from banks. Several participants commented on the vulnerabilities witnessed during the March selloff in the Treasury market. The substantial maturity and liquidity transformations undertaken by some nonbank financial institutionsâsuch as prime MMFs and corporate bond and bank loan mutual fundsâwere also discussed. A couple of participants expressed"
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件段落提及「技術顛覆」和「限制」，但前者未與地緣政治競爭相關，後者則是指疫情限制，且未提及半導體出口限制或公司治理問題。"
       },
       {
         "doc": "2020-11-05|Statement",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "The path of the economy will depend significantly on the course of the virus. The ongoing public health crisis will continue to weigh on economic activity, employment, and inflation in the near term, and poses considerable risks to the economic outlook over the medium term.",
           "The COVID-19 pandemic is causing tremendous human and economic hardship across the United States and around the world. Economic activity and employment have continued to recover but remain well below their levels at the beginning of the year. Weaker demand and earlier declines in oil prices have been holding down consumer price inflation. Overall financial conditions remain accommodative, in part",
           "price inflation. Overall financial conditions remain accommodative, in part reflecting policy measures to support the economy and the flow of credit to U.S. households and businesses.",
           "The Federal Reserve is committed to using its full range of tools to support the U.S. economy in this challenging time, thereby promoting its maximum employment and price stability goals.",
           "range until labor market conditions have reached levels consistent with the Committee's assessments of maximum employment and inflation has risen to 2 percent and is on track to moderately exceed 2 percent for some time. In addition, over coming months the Federal Reserve will increase its holdings of Treasury securities and agency mortgage-backed securities at least at the current pace to"
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件段落主要討論COVID-19疫情對經濟的影響及聯準會的應對措施，與地緣政治科技競爭、半導體出口限制或公司治理議題無關。"
       },
       {
         "doc": "2020-12-16|Minute",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "with restrictions less severe and more targeted than in the spring, the hit to economic activity looked to be more limited. Economic growth appeared to hold up better in several emerging Asian economies. In these economies, effective virus control was supporting domestic demand, while strong external demand boosted exports. Inflationary pressures remained subdued in most foreign economies amid",
           "suggested that, as a result of ongoing technology-enabled disruption to business models and practices or lasting pandemic-induced restraint on firms' pricing power, downward pressure on inflation could persist. Several participants noted a pickup in market-based measures of inflation compensation. Participants expected that, with continued monetary policy support, inflation would rise over time.",
           "Investor sentiment abroad improved over the intermeeting period, as favorable news on COVID-19 vaccines and the resolution of uncertainty regarding the U.S. election apparently outweighed concerns about another surge in COVID-19 cases and the resulting adoption of tighter social-distancing restrictions in many countries. On balance, prices of global risky assets increased notably, implied",
           "Broad stock price indexes increased over the intermeeting period, led by steep stock price gains in cyclical sectors and buoyed by the prospect of successful vaccines and lower postâelection uncertainty. One-month S&P 500 option-implied volatilityâthe VIXâdeclined, reversing a pre-election increase. Consistent with the optimism driving stock prices, spreads of corporate bond yields over",
           "more balanced than earlier. Still, participants saw significant uncertainties regarding how quickly the deployment of vaccines would proceed as well as how different members of the public would respond to the availability of vaccines. Participants cited several downside risks that could threaten the economic recovery. These risks included the possibility of significant additional fiscal policy"
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件中沒有任何段落直接討論地緣政治科技競爭、半導體出口限制或公司治理議題。"
       },
       {
         "doc": "2020-12-16|Statement",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "The path of the economy will depend significantly on the course of the virus. The ongoing public health crisis will continue to weigh on economic activity, employment, and inflation in the near term, and poses considerable risks to the economic outlook over the medium term.",
           "The COVID-19 pandemic is causing tremendous human and economic hardship across the United States and around the world. Economic activity and employment have continued to recover but remain well below their levels at the beginning of the year. Weaker demand and earlier declines in oil prices have been holding down consumer price inflation. Overall financial conditions remain accommodative, in part",
           "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michelle W. Bowman; Lael Brainard; Richard H. Clarida; Patrick Harker; Robert S. Kaplan; Neel Kashkari; Loretta J. Mester; and Randal K. Quarles.\n\nImplementation Note issued December 16, 2020",
           "price inflation. Overall financial conditions remain accommodative, in part reflecting policy measures to support the economy and the flow of credit to U.S. households and businesses.",
           "The Federal Reserve is committed to using its full range of tools to support the U.S. economy in this challenging time, thereby promoting its maximum employment and price stability goals."
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件內容主要討論疫情對經濟的影響及聯準會的應對措施，與地緣政治科技競爭、半導體出口限制及公司治理議題無關。"
       }
     ]
   },
@@ -454,179 +514,227 @@
     "documents": [
       {
         "doc": "2021-09-22|Minute",
-        "grade": null,
+        "grade": 2,
         "closest_passages": [
           "Foreign asset prices fluctuated moderately over the intermeeting period as market participants continued to assess the effect of the Delta variant on global growth and inflation. Concerns about a potential default by a heavily indebted Chinese property developer and risks of a downturn in the Chinese real estate sector intensified later in the period, but effects on broader financial markets were",
           "Financial market prices were little changed over the intermeeting period. Concerns over the period about the effects of COVID-19 developments on economic performance and, late in the period, about a heavily indebted Chinese property developer appeared to have only marginal net effects on financial asset prices. The incoming domestic economic data were generally viewed as mixed. Yields on Treasury",
           "pre-pandemic levels. On September 20, stock market prices fell notably and speculative-grade yield spreads widened amid rising concerns about the creditworthiness of a Chinese property developer, but these moves were mostly reversed during the following day, particularly in the stock market.",
           "Many participants remarked upon risk-management considerations and the way in which these figured into their thinking on asset purchases and the appropriate policy stance. A number of downside risks to the economic outlook were cited, including a potential tightening of financial conditions, the possibility that another rise in COVID-19 cases would slow the economic recovery by more than",
           "America and emerging Europe, some central banks recently tightened policy to address rising inflation pressures. Investors remained focused on other vulnerabilities in emerging markets, and concerns had grown recently about the possible implications of developments in China."
-        ]
+        ],
+        "gemini_grade": 2,
+        "grade_source": "gemini",
+        "reason": "文件有多個段落直接討論中國房地產開發商的債務問題和房地產市場的下行風險，直接回應了查詢中的「property market distress」核心主題。"
       },
       {
         "doc": "2021-09-22|Statement",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "The path of the economy continues to depend on the course of the virus. Progress on vaccinations will likely continue to reduce the effects of the public health crisis on the economy, but risks to the economic outlook remain.",
           "With progress on vaccinations and strong policy support, indicators of economic activity and employment have continued to strengthen. The sectors most adversely affected by the pandemic have improved in recent months, but the rise in COVID-19 cases has slowed their recovery. Inflation is elevated, largely reflecting transitory factors. Overall financial conditions remain accommodative, in part",
           "transitory factors. Overall financial conditions remain accommodative, in part reflecting policy measures to support the economy and the flow of credit to U.S. households and businesses.",
           "as expected, the Committee judges that a moderation in the pace of asset purchases may soon be warranted. These asset purchases help foster smooth market functioning and accommodative financial conditions, thereby supporting the flow of credit to households and businesses.",
           "securities by at least $80 billion per month and of agency mortgageâbacked securities by at least $40 billion per month until substantial further progress has been made toward its maximum employment and price stability goals. Since then, the economy has made progress toward these goals. If progress continues broadly as expected, the Committee judges that a moderation in the pace of asset"
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件段落主要討論美國經濟、疫情影響、通膨及貨幣政策，未提及中國經濟放緩、房地產市場困境或全球貿易影響。"
       },
       {
         "doc": "2021-11-03|Minute",
-        "grade": null,
+        "grade": 2,
         "closest_passages": [
           "a faster removal of monetary policy accommodation. Market concerns about risks of a downturn in the Chinese real estate sector remained elevated, and inflows into funds investing in China slowed, but the effects on broader financial markets were limited. On balance, major foreign equity indexes increased moderately, and the broad dollar appreciated a touch.",
           "Foreign GDP growth slowed modestly in the third quarter, as supply chain disruptions and the resurgence of COVID-19 weighed on production, particularly in China and other emerging market economies (EMEs). In several EMEs, public health restrictions were reinstated, resulting in factory closures. Moreover, Chinese manufacturing output was curtailed by the rationing of electricity amid a coal",
           "products. Bottlenecks in the global semiconductor industry continued to weigh on exports and imports of automotive products, and shipping congestion continued to restrain trade overall. Advance estimates for September suggested that goods imports rose while goods exports fell, pointing to a further widening of the trade deficit. The Bureau of Economic Analysis estimated that a drop in net exports",
           "Participants observed that growth in economic activity had slowed in the third quarter to a rate significantly below the robust pace seen in the first half of the year. The spread of the Delta variant had contributed to the slowdown in growth in the third quarter by damping household and business spending, holding down labor supply, and intensifying supply chain disruptions. Participants noted",
           "The U.S. international trade deficit widened in August, reflecting a moderate pace of import growth against a subdued pace of export growth. Real import growth was driven by increases in consumer goods and industrial supplies. Real export growth was held back by declines in capital goods, agricultural products, and automotive products. Bottlenecks in the global semiconductor industry continued to"
-        ]
+        ],
+        "gemini_grade": 2,
+        "grade_source": "gemini",
+        "reason": "段落直接提及中國房地產市場的下行風險、中國經濟成長放緩，以及供應鏈中斷對全球生產的影響。"
       },
       {
         "doc": "2021-11-03|Statement",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "The path of the economy continues to depend on the course of the virus. Progress on vaccinations and an easing of supply constraints are expected to support continued gains in economic activity and employment as well as a reduction in inflation. Risks to the economic outlook remain.",
           "factors that are expected to be transitory. Supply and demand imbalances related to the pandemic and the reopening of the economy have contributed to sizable price increases in some sectors. Overall financial conditions remain accommodative, in part reflecting policy measures to support the economy and the flow of credit to U.S. households and businesses.",
           "With progress on vaccinations and strong policy support, indicators of economic activity and employment have continued to strengthen. The sectors most adversely affected by the pandemic have improved in recent months, but the summer's rise in COVID-19 cases has slowed their recovery. Inflation is elevated, largely reflecting factors that are expected to be transitory. Supply and demand imbalances",
           "in the pace of net asset purchases will likely be appropriate each month, but it is prepared to adjust the pace of purchases if warranted by changes in the economic outlook. The Federal Reserve's ongoing purchases and holdings of securities will continue to foster smooth market functioning and accommodative financial conditions, thereby supporting the flow of credit to households and businesses.",
           "last December, the Committee decided to begin reducing the monthly pace of its net asset purchases by $10 billion for Treasury securities and $5 billion for agency mortgage-backed securities. Beginning later this month, the Committee will increase its holdings of Treasury securities by at least $70 billion per month and of agency mortgageâbacked securities by at least $35 billion per month."
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件段落主要討論美國經濟狀況、疫情影響、通膨及聯準會的貨幣政策，未提及中國經濟放緩、房地產困境或全球貿易影響。"
       },
       {
         "doc": "2021-12-15|Minute",
-        "grade": null,
+        "grade": 2,
         "closest_passages": [
           "index increased modestly. Emerging market economy (EME) sovereign spreads widened, and capital flows into EME-dedicated funds turned slightly negative in the second half of November, partly in response to concerns about the Omicron variant. A credit agency declared two heavily indebted Chinese property developers to be in \"restricted default,\" hurting asset prices in China's real estate sector,",
           "Incoming data were consistent with a pickup in foreign economic growth in the current quarter, driven mainly by the reopening of Asian economies following lockdowns earlier in the year to contain a resurgence of COVID-19 cases. Strong gains in intra-Asian trade and solid readings of purchasing managers indexes also provided some early signs that production bottlenecks in the region were easing.",
           "The manager turned next to a discussion of foreign developments. Foreign policy-sensitive rates were relatively steady over the intermeeting period, as several central banks in advanced foreign economies (AFEs) signaled somewhat cautious approaches to the removal of policy accommodation. Market participants continued to focus on risks related to economic and financial developments in China,",
           "Foreign asset prices fluctuated over the intermeeting period in response to central bank communications, headlines regarding COVID-related restrictions in some countries, and the spread of the Omicron variant. On net, AFE sovereign yields declined, major foreign equity indexes generally edged down, and the broad dollar index increased modestly. Emerging market economy (EME) sovereign spreads",
           "safe-haven flows. Pandemic-related fears as well as concerns about inflation and tighter monetary policy apparently weighed on risky asset prices despite continued robust economic data. In domestic markets, broad equity price indexes were little changed, equity market volatility increased markedly, and spreads on corporate bonds widened moderately. In AFEs, sovereign yields declined, and major"
-        ]
+        ],
+        "gemini_grade": 2,
+        "grade_source": "gemini",
+        "reason": "文件中明確提及中國房地產開發商違約導致資產價格受損，並討論了與中國經濟和金融發展相關的風險。"
       },
       {
         "doc": "2021-12-15|Statement",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "rate has declined substantially. Supply and demand imbalances related to the pandemic and the reopening of the economy have continued to contribute to elevated levels of inflation. Overall financial conditions remain accommodative, in part reflecting policy measures to support the economy and the flow of credit to U.S. households and businesses.",
           "The path of the economy continues to depend on the course of the virus. Progress on vaccinations and an easing of supply constraints are expected to support continued gains in economic activity and employment as well as a reduction in inflation. Risks to the economic outlook remain, including from new variants of the virus.",
           "that similar reductions in the pace of net asset purchases will likely be appropriate each month, but it is prepared to adjust the pace of purchases if warranted by changes in the economic outlook. The Federal Reserve's ongoing purchases and holdings of securities will continue to foster smooth market functioning and accommodative financial conditions, thereby supporting the flow of credit to",
           "With progress on vaccinations and strong policy support, indicators of economic activity and employment have continued to strengthen. The sectors most adversely affected by the pandemic have improved in recent months but continue to be affected by COVID-19. Job gains have been solid in recent months, and the unemployment rate has declined substantially. Supply and demand imbalances related to the",
           "In assessing the appropriate stance of monetary policy, the Committee will continue to monitor the implications of incoming information for the economic outlook. The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals. The Committee's assessments will take into account a wide range of"
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件段落僅討論美國經濟、通膨及貨幣政策，未提及中國經濟放緩、房地產市場困境或全球貿易影響。"
       },
       {
         "doc": "2022-01-26|Minute",
-        "grade": null,
+        "grade": 2,
         "closest_passages": [
           "Over the intermeeting period, movements in foreign asset prices responded to waning concerns about the Omicron variant's potential economic effects and firming views that monetary accommodation in several advanced economies will be removed at a faster pace than previously expected. Some market participants also pointed to rising geopolitical tensions related to Russia as contributing to the",
           "Broad equity indexes decreased markedly, on net, particularly in the latter part of the intermeeting period, as shifts in expectations about the pace of monetary policy tightening, globalâ¯inflationary pressures, and escalating tensions between Russia and Ukraine weighed on equity prices. The one-month option-implied volatility on the S&P 500âthe VIXâincreased considerably, on net, to above",
           "In their discussion of risks to the outlook, participants agreed that uncertainty regarding the path of inflation was elevated and that risks to inflation were weighted to the upside. Participants cited several such risks, including the zero-tolerance COVID-19 policy in China that had the potential to further disrupt supply chains, the possibility of geopolitical turmoil that could cause",
           "measures to support the economy and the flow of credit to U.S. households and businesses. Participants judged that the path of the economy continued to depend on the course of the virus. Progress on vaccinations and an easing of supply constraints were expected to support continued gains in economic activity and employment as well as a reduction in inflation. Risks to the economic outlook",
           "gains had been solid in recent months, and the unemployment rate had declined substantially. Supply and demand imbalances related to the pandemic and the reopening of the economy had continued to contribute to elevated levels of inflation. Overall financial conditions had remained accommodative, in part reflecting policy measures to support the economy and the flow of credit to U.S. households"
-        ]
+        ],
+        "gemini_grade": 2,
+        "grade_source": "gemini",
+        "reason": "段落直接提及中國的清零政策可能進一步擾亂供應鏈，這直接關聯到查詢中的「中國」和「全球貿易影響」。"
       },
       {
         "doc": "2022-01-26|Statement",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "Supply and demand imbalances related to the pandemic and the reopening of the economy have continued to contribute to elevated levels of inflation. Overall financial conditions remain accommodative, in part reflecting policy measures to support the economy and the flow of credit to U.S. households and businesses.",
           "The path of the economy continues to depend on the course of the virus. Progress on vaccinations and an easing of supply constraints are expected to support continued gains in economic activity and employment as well as a reduction in inflation. Risks to the economic outlook remain, including from new variants of the virus.",
           "Indicators of economic activity and employment have continued to strengthen. The sectors most adversely affected by the pandemic have improved in recent months but are being affected by the recent sharp rise in COVID-19 cases. Job gains have been solid in recent months, and the unemployment rate has declined substantially. Supply and demand imbalances related to the pandemic and the reopening of",
           "month and of agency mortgageâbacked securities by at least $10 billion per month. The Federal Reserve's ongoing purchases and holdings of securities will continue to foster smooth market functioning and accommodative financial conditions, thereby supporting the flow of credit to households and businesses.",
           "In assessing the appropriate stance of monetary policy, the Committee will continue to monitor the implications of incoming information for the economic outlook. The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals. The Committee's assessments will take into account a wide range of"
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "提供的段落完全沒有提及中國經濟放緩、房地產市場困境或全球貿易影響，僅討論美國經濟狀況和聯準會政策。"
       },
       {
         "doc": "2022-03-16|Minute",
-        "grade": null,
+        "grade": 2,
         "closest_passages": [
           "exacerbated by the Russian invasion; recent COVID-related lockdowns in China that had the potential to further disrupt supply chains; and the possibility that longer-run inflation expectations might become unanchored. Uncertainty about real activity was also seen as elevated. Various participants noted downside risks to the outlook, including risks associated with the Russian invasion, a broad",
           "and other bottlenecks continued to restrain the level of trade in goods. Services exports and imports fell back in January relative to December, reflecting a reduction in travel to and from the United States. Because international travel remained depressed, services trade was still very low relative to pre-pandemic norms.",
           "times. Moreover, with COVID-19 cases having fallen in many regions, authorities had already eased restrictions and social mobility had recovered, except in China, where lockdowns were recently reimposed. The Russian invasion of Ukraine, however, constituted another negative shock to the global economy by pushing up commodity prices further, hurting global risk sentiment, and exacerbating supply",
           "Foreign asset prices were highly volatile over the intermeeting period in response to geopolitical developments, central bank communications, and rising inflation concerns. News related to Russia's invasion of Ukraine, in particular, contributed to decreases in major foreign equity indexes, especially in Europe, and a moderate increase in the broad dollar index. Despite downward pressure from the",
           "funds experienced moderate portfolio outflows, which increased after the Russian invasion. Even so, financial conditions among EMEsâincluding fund flows and the relative strength of local currencies outside of Europeâwere resilient compared with past episodes of global turbulence, reflecting in part higher commodity prices and monetary policy tightening by EME central banks."
-        ]
+        ],
+        "gemini_grade": 2,
+        "grade_source": "gemini",
+        "reason": "文件直接提及中國因疫情封鎖導致的供應鏈中斷，這直接關聯到中國經濟放緩及全球貿易影響，儘管未提及房地產市場困境。"
       },
       {
         "doc": "2022-03-16|Statement",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "The invasion of Ukraine by Russia is causing tremendous human and economic hardship. The implications for the U.S. economy are highly uncertain, but in the near term the invasion and related events are likely to create additional upward pressure on inflation and weigh on economic activity.",
           "Indicators of economic activity and employment have continued to strengthen. Job gains have been strong in recent months, and the unemployment rate has declined substantially. Inflation remains elevated, reflecting supply and demand imbalances related to the pandemic, higher energy prices, and broader price pressures.",
           "In assessing the appropriate stance of monetary policy, the Committee will continue to monitor the implications of incoming information for the economic outlook. The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals. The Committee's assessments will take into account a wide range of",
           "The Committee seeks to achieve maximum employment and inflation at the rate of 2 percent over the longer run. With appropriate firming in the stance of monetary policy, the Committee expects inflation to return to its 2 percent objective and the labor market to remain strong. In support of these goals, the Committee decided to raise the target range for the federal funds rate to 1/4 to 1/2",
           "goals. The Committee's assessments will take into account a wide range of information, including readings on public health, labor market conditions, inflation pressures and inflation expectations, and financial and international developments."
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "文件段落主要討論美國經濟、通膨、貨幣政策以及俄烏戰爭的影響，並未提及中國經濟放緩、房地產困境或全球貿易影響。"
       },
       {
         "doc": "2022-05-04|Minute",
-        "grade": null,
+        "grade": 1,
         "closest_passages": [
           "the U.S. economy were highly uncertain. The invasion and related events were creating additional upward pressure on inflation and were likely to weigh on economic activity. In addition, participants judged that COVID-related lockdowns in China were likely to exacerbate supply chain disruptions. Against this background, participants stated that they were highly attentive to inflation risks.",
           "Russian invasion and COVID-related lockdowns in China and the likelihood of a prolonged rise in energy and commodity prices.",
           "The invasion of Ukraine by Russia is causing tremendous human and economic hardship. The implications for the U.S. economy are highly uncertain. The invasion and related events are creating additional upward pressure on inflation and are likely to weigh on economic activity. In addition, COVID-related lockdowns in China are likely to exacerbate supply chain disruptions. The Committee is highly",
           "lockdowns in China weighed on prices of risky assets, but investor concerns surrounding the economic effects of the war in Ukraine seemed to abate partially. On balance, major foreign equity indexes registered mixed and relatively modest changes. The U.S. dollar generally strengthened, with a more pronounced dollar appreciation against AFE currencies, as U.S. Treasury yields generally rose more",
           "of Ukraine, including surges in energy and commodity prices, were adding to near-term inflation pressures. In addition, COVID-related lockdowns in China were likely to disrupt global supply chains, potentially adding further upward pressure on the prices paid by U.S. businesses and consumers. Most participants indicated that their business contacts had continued to report that substantial"
-        ]
+        ],
+        "gemini_grade": 1,
+        "grade_source": "gemini",
+        "reason": "文件討論了中國疫情封鎖對全球供應鏈和資產價格的影響，部分符合查詢中的中國經濟放緩及全球貿易影響，但未提及房地產市場困境。"
       },
       {
         "doc": "2022-05-04|Statement",
-        "grade": null,
+        "grade": 1,
         "closest_passages": [
           "The invasion of Ukraine by Russia is causing tremendous human and economic hardship. The implications for the U.S. economy are highly uncertain. The invasion and related events are creating additional upward pressure on inflation and are likely to weigh on economic activity. In addition, COVID-related lockdowns in China are likely to exacerbate supply chain disruptions. The Committee is highly",
           "Although overall economic activity edged down in the first quarter, household spending and business fixed investment remained strong. Job gains have been robust in recent months, and the unemployment rate has declined substantially. Inflation remains elevated, reflecting supply and demand imbalances related to the pandemic, higher energy prices, and broader price pressures.",
           "are likely to exacerbate supply chain disruptions. The Committee is highly attentive to inflation risks.",
           "In assessing the appropriate stance of monetary policy, the Committee will continue to monitor the implications of incoming information for the economic outlook. The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committeeâs goals. The Committee's assessments will take into account a wide range of",
           "The Committee seeks to achieve maximum employment and inflation at the rate of 2 percent over the longer run. With appropriate firming in the stance of monetary policy, the Committee expects inflation to return to its 2 percent objective and the labor market to remain strong. In support of these goals, the Committee decided to raise the target range for the federal funds rate to 3/4 to 1 percent"
-        ]
+        ],
+        "gemini_grade": 1,
+        "grade_source": "gemini",
+        "reason": "該文件提到中國的COVID相關封鎖可能加劇供應鏈中斷，這與全球貿易影響相關，但未直接討論中國經濟放緩或房地產市場困境。"
       },
       {
         "doc": "2022-06-15|Minute",
-        "grade": null,
+        "grade": 2,
         "closest_passages": [
           "Incoming data suggested that the global reverberations from lockdown measures to deal with the spread of the COVID-19 virus in China and the Russian invasion of Ukraine slowed foreign economic growth. In China, activity indicators pointed to a sizable restraint on economic activity. The Russian invasion of Ukraine continued to have an imprint on foreign activity, with persistent stresses in",
           "on inflation and were weighing on global economic activity. In addition, participants indicated that COVID-related lockdowns in China were likely to exacerbate supply chain disruptions. Against this background, participants stated that they were highly attentive to inflation risks.",
           "The invasion of Ukraine by Russia is causing tremendous human and economic hardship. The invasion and related events are creating additional upward pressure on inflation and are weighing on global economic activity. In addition, COVID-related lockdowns in China are likely to exacerbate supply chain disruptions. The Committee is highly attentive to inflation risks.",
           "On balance, the available indicators suggested that private domestic final purchases were increasing at a slower pace in the second quarter than in the first quarter. And with the available trade data for April pointing to a rebound in exports and a moderation in import growth in the second quarter, GDP growth appeared to be rebounding after having declined in the first quarter.",
           "continued to have an imprint on foreign activity, with persistent stresses in global commodity markets and declining consumer and business confidence, especially in Europe. Inflation abroad moved higher, driven by further increases in consumer energy and food prices as well as some additional broadening of price pressures to core goods and services. Central banks around the world further"
-        ]
+        ],
+        "gemini_grade": 2,
+        "grade_source": "gemini",
+        "reason": "段落直接提及中國經濟活動因疫情封鎖而受到顯著限制，並導致全球供應鏈中斷，直接回應了查詢中的「中國經濟放緩」和「全球貿易影響」。雖然未提及房地產市場困境，但已涵蓋查詢的兩個核心主題。"
       },
       {
         "doc": "2022-06-15|Statement",
-        "grade": null,
+        "grade": 1,
         "closest_passages": [
           "The invasion of Ukraine by Russia is causing tremendous human and economic hardship. The invasion and related events are creating additional upward pressure on inflation and are weighing on global economic activity. In addition, COVID-related lockdowns in China are likely to exacerbate supply chain disruptions. The Committee is highly attentive to inflation risks.",
           "Overall economic activity appears to have picked up after edging down in the first quarter. Job gains have been robust in recent months, and the unemployment rate has remained low. Inflation remains elevated, reflecting supply and demand imbalances related to the pandemic, higher energy prices, and broader price pressures.",
           "In assessing the appropriate stance of monetary policy, the Committee will continue to monitor the implications of incoming information for the economic outlook. The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals. The Committee's assessments will take into account a wide range of",
           "In addition, the Committee will continue reducing its holdings of Treasury securities and agency debt and agency mortgage-backed securities, as described in the Plans for Reducing the Size of the Federal Reserve's Balance Sheet that were issued in May. The Committee is strongly committed to returning inflation to its 2 percent objective.",
           "The Committee seeks to achieve maximum employment and inflation at the rate of 2 percent over the longer run. In support of these goals, the Committee decided to raise the target range for the federal funds rate to 1â1/2 to 1-3/4 percent and anticipates that ongoing increases in the target range will be appropriate. In addition, the Committee will continue reducing its holdings of Treasury"
-        ]
+        ],
+        "gemini_grade": 1,
+        "grade_source": "gemini",
+        "reason": "文件提及中國的COVID-19封鎖可能加劇供應鏈中斷，這與全球貿易影響相關，但未直接討論中國經濟放緩或房地產市場困境。"
       },
       {
         "doc": "2022-07-27|Minute",
-        "grade": null,
+        "grade": 2,
         "closest_passages": [
           "Foreign economic growth slowed notably in the second quarter, as COVID-19-related lockdowns led to a sharp contraction in China and Russia's war against Ukraine took a toll on foreign activity, especially in Europe. Indicators for June showed the Chinese economy rebounding as the lockdowns were eased. The global economy, however, continued to face headwinds from disruptions to the supply of",
           "Real goods exports edged down in May after growing robustly in March and April. Real goods imports continued to step down from the exceptionally strong March readings, driven by declines in imports of consumer goods and capital goods. Exports and imports of services continued to be held back by an incomplete recovery of international travel. The nominal U.S. international trade deficit narrowed",
           "had also all led to slower growth in households' expenditures. In addition, a deterioration in the foreign economic outlook and a strong dollar were contributing to a weakening of external demand. Participants anticipated that U.S. real GDP would expand in the second half of the year, but many expected that growth in economic activity would be at a below-trend pace, as the period ahead would",
           "scenario. However, investors appeared to be increasingly attentive to downside risks to the economy in light of the potential for shocks from abroad and the continued upside surprises to inflation.",
           "Equity and corporate debt prices declined significantly since the last assessment, reflecting concerns over slower growth and lower risk appetite in corporate markets. Declining risk appetite has also led to sharp declines in the price of some digital assets. The staff noted that digital assets tended to be volatile. The staff also highlighted the financial stability considerations associated"
-        ]
+        ],
+        "gemini_grade": 2,
+        "grade_source": "gemini",
+        "reason": "文件直接提及中國經濟因疫情封鎖而急劇收縮，以及全球貿易面臨的逆風和美國進出口表現，直接回應了查詢中的兩個核心主題。"
       },
       {
         "doc": "2022-07-27|Statement",
-        "grade": null,
+        "grade": 0,
         "closest_passages": [
           "Recent indicators of spending and production have softened. Nonetheless, job gains have been robust in recent months, and the unemployment rate has remained low. Inflation remains elevated, reflecting supply and demand imbalances related to the pandemic, higher food and energy prices, and broader price pressures.",
           "Russia's war against Ukraine is causing tremendous human and economic hardship. The war and related events are creating additional upward pressure on inflation and are weighing on global economic activity. The Committee is highly attentive to inflation risks.",
           "In assessing the appropriate stance of monetary policy, the Committee will continue to monitor the implications of incoming information for the economic outlook. The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals. The Committee's assessments will take into account a wide range of",
           "In addition, the Committee will continue reducing its holdings of Treasury securities and agency debt and agency mortgage-backed securities, as described in the Plans for Reducing the Size of the Federal Reserve's Balance Sheet that were issued in May. The Committee is strongly committed to returning inflation to its 2 percent objective.",
           "The Committee seeks to achieve maximum employment and inflation at the rate of 2 percent over the longer run. In support of these goals, the Committee decided to raise the target range for the federal funds rate to 2-1/4 to 2-1/2 percent and anticipates that ongoing increases in the target range will be appropriate. In addition, the Committee will continue reducing its holdings of Treasury"
-        ]
+        ],
+        "gemini_grade": 0,
+        "grade_source": "gemini",
+        "reason": "提供的段落中沒有提及中國經濟放緩、房地產市場困境或其對全球貿易的影響。"
       }
     ]
   }

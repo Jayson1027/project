@@ -28,7 +28,8 @@ class RateTrend(str, Enum):
 
 class MacroSignals(BaseModel):
     inflation_risk: RiskLevel = Field(description="通膨風險高低")
-    interest_rate_trend: RateTrend = Field(description="利率走向：升息 UPWARD、維持 STABLE、降息 DOWNWARD")
+    interest_rate_trend: RateTrend = Field(description="未來 1~3 個月的利率走向：上升 UPWARD、持平 STABLE、下降 DOWNWARD")
+    growth_risk: RiskLevel = Field(description="經濟成長放緩／衰退風險高低")
     # vix_spike 不交給模型判斷，由 core/market_data.py 依 VIX 實際數值計算後補進輸出
 
 
@@ -36,11 +37,7 @@ class SentimentAnalysis(BaseModel):
     overall_risk_score: int = Field(description="整體市場風險分數，0 = 極低風險，100 = 極高風險", ge=0, le=100)
     tech_sector_sentiment: float = Field(description="科技類股情緒，-1 = 極度悲觀，1 = 極度樂觀", ge=-1, le=1)
     bond_sector_sentiment: float = Field(description="長天期公債情緒，-1 = 極度悲觀，1 = 極度樂觀", ge=-1, le=1)
-
-
-class TacticalGuidance(BaseModel):
-    suggested_safe_haven_bias: float = Field(description="建議避險資產（公債、黃金）至少佔的比例 (0~1)", ge=0, le=1)
-    max_growth_asset_exposure: float = Field(description="建議成長型資產（科技股）最多佔的比例 (0~1)", ge=0, le=1)
+    gold_sentiment: float = Field(description="黃金情緒（避險、地緣政治與抗通膨需求），-1 = 極度悲觀，1 = 極度樂觀", ge=-1, le=1)
 
 
 class HistoricalAnalog(BaseModel):
@@ -52,7 +49,7 @@ class Agent1Output(BaseModel):
     market_condition: MarketCondition = Field(description="整體市場體制")
     macro_signals: MacroSignals
     sentiment_analysis: SentimentAnalysis
-    tactical_guidance: TacticalGuidance
+    confidence: RiskLevel = Field(description="對整體判斷的把握程度：資訊方向一致時 HIGH，互相矛盾或資訊不足時 LOW")
     historical_analogs: list[HistoricalAnalog] = Field(description="真正可作為當前情境類比的歷史文獻引用；都不相符時為空陣列")
     reasoning: str = Field(description="從新聞、Fed 狀態與歷史文獻推論出上述判斷的過程 (繁體中文)")
 
@@ -103,18 +100,19 @@ class MacroAgent:
         prompt = f"""
         你是一位專業的總經策略分析師 (Agent 1)，負責判斷當前的市場大環境。
         你的輸出會交給下游的 Agent 2，由它轉換成各資產的權重上下限，所以你不需要決定個別資產的權重。
-        請綜合【當前 Fed 狀態】、【市場數據】、【即時新聞】與【歷史文獻】，填寫市場體制、總經訊號、情緒分數與戰術指引。
+        請綜合【當前 Fed 狀態】、【市場數據】、【即時新聞】與【歷史文獻】，填寫市場體制、總經訊號、情緒分數與判斷的信心程度。
 
         【嚴格要求】：
-        1. overall_risk_score 為 0~100 的整數；兩個 sector_sentiment 介於 -1 與 1 之間。
-        2. suggested_safe_haven_bias 與 max_growth_asset_exposure 為 0~1 的比例。
-        3. interest_rate_trend 要對照【市場數據】中十年期殖利率的實際變化判斷。
-        4. historical_analogs 只能引用下方出現的文獻編號 (如 D1)，不可引用其他文獻或自行編造。
+        1. overall_risk_score 為 0~100 的整數；tech_sector_sentiment、bond_sector_sentiment、gold_sentiment 介於 -1 與 1 之間。
+        2. interest_rate_trend 判斷未來 1~3 個月的利率方向，需綜合 Fed 官員態度、通膨風險與成長風險，
+           不可只重述十年期殖利率的過去變化；若你的判斷與殖利率近期走勢相反，請在 reasoning 說明原因。
+        3. historical_analogs 只能引用下方出現的文獻編號 (如 D1)，不可引用其他文獻或自行編造。
            只引用經濟情境真正與現在相似、可作為類比的文獻；主題相近但情境不同的不要引用。
            若所有文獻都不相符，historical_analogs 留空陣列，並在 reasoning 說明原因。
-        5. reasoning 要寫清楚每個判斷依據哪些新聞、哪項市場數據與哪份文獻。
-        6. 新聞附有發布時間，請以較新的新聞為主。
-        7. 文字欄位請使用繁體中文。
+        4. reasoning 要寫清楚每個判斷依據哪些新聞、哪項市場數據與哪份文獻。
+        5. 新聞附有發布時間，請以較新的新聞為主。
+        6. 文字欄位請使用繁體中文。
+        7. confidence 反映判斷的把握程度：新聞、市場數據與 Fed 狀態方向一致時填 HIGH；互相矛盾或資訊不足時填 LOW。
 
         【當前 Fed 狀態】: {fed_state['fed_policy_phase']}
         【市場核心關注】: {fed_state['key_focus']}

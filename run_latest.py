@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from qdrant_client import QdrantClient
 
 from core.agent1 import MacroAgent
+from core.agent2 import ConstraintAgent
 from core.clawer import FinancialNewsCrawler
 from core.fed_retriever import FedRetriever
 from core.market_data import fetch_market_snapshot
@@ -18,6 +19,7 @@ from scripts.state_tracker import StateTracker
 COLLECTION_NAME = "project"
 OUTPUT_PATH = Path("data/latest_rag.json")
 MACRO_PATH = Path("data/latest_macro.json")
+BOUNDS_PATH = Path("data/latest_bounds.json")
 NEWS_WINDOW = timedelta(days=7)
 
 
@@ -84,6 +86,9 @@ def main():
     )
     print(json.dumps(macro, ensure_ascii=False, indent=2))
 
+    bounds = ConstraintAgent(gemini_key).build(macro)
+    print(json.dumps(bounds, ensure_ascii=False, indent=2))
+
     generated_at = datetime.now().isoformat(timespec="seconds")
     OUTPUT_PATH.write_text(
         json.dumps(
@@ -98,6 +103,7 @@ def main():
                 "retrieval": results,
                 "context": context,
                 "agent1": macro,
+                "agent2": bounds,
             },
             ensure_ascii=False,
             indent=2,
@@ -111,6 +117,12 @@ def main():
         encoding="utf-8",
     )
     print(f"大環境判斷已存到 {MACRO_PATH}（供 Agent 2 使用）")
+
+    BOUNDS_PATH.write_text(
+        json.dumps({"generated_at": generated_at, **bounds}, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    print(f"權重上下限已存到 {BOUNDS_PATH}（供 Markowitz 使用）")
 
 
 if __name__ == "__main__":
